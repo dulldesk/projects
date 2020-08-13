@@ -10,8 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
+    - uses: actions/setup-node@v1
       with:
         node-version: 12
       
@@ -26,4 +25,3 @@ jobs:
         deploy_key: ${{ secrets.GHPAGES_DEPLOY_KEY }}
         publish_dir: ./build
 
-# ref: https://github.com/peaceiris/actions-gh-pages
