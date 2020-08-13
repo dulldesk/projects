@@ -3,12 +3,6 @@ import './Project.scss';
 import Footer from './Footer';
 
 class Project extends React.Component {
-  // constructor(props) {
-  //   super(props);
-  // }
-  // componentDidMount() {
-    // console.log(window.work)
-  // }
   render() {
     let hasFooter = Boolean(this.props.external);
 

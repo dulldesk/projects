@@ -1,6 +1,4 @@
 import React from 'react';
-// import logo from './logo.svg';
-// import './Project.scss';
 import Project from '../Project/Project';
 
 class ProjectListing extends React.Component {

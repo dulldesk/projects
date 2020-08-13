@@ -1,7 +1,6 @@
 {
   "name": "projects",
   "version": "0.1.0",
-  "private": true,
   "homepage" : "https://dulldesk.github.io/projects",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
