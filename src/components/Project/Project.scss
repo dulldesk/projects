@@ -1,0 +1,82 @@
+/* nearly identical to https://dulldesk.github.io/css/project-style.css */
+
+%card-transition {
+	transition: box-shadow 0.1s ease-out;
+}
+
+@mixin filter($value) {
+	filter: opacity($value);
+	-webkit-filter: opacity($value);
+}
+
+.card {
+	@extend %card-transition;
+	margin: 5px auto 10px;
+
+	max-width:100%;
+	float: none;
+}
+
+.card:hover {
+	@extend %card-transition;
+	box-shadow: 5px 5px 10px grey;
+}
+
+.card h2 {
+	font-weight: 300;
+}
+
+img.card-link-icon {
+	@include filter(40%);
+}
+
+%card-link-icon-transition {
+	transition: filter 0.2s ease-out;
+}
+
+.card-link-icon {
+	@extend %card-link-icon-transition;
+	@include filter(80%);
+	color: grey;
+}
+
+.card-link-icon:hover {
+	@extend %card-link-icon-transition;
+	@include filter(100%);
+	cursor:pointer;
+	color: black;
+}
+
+.card, .card > div {
+	box-sizing: content-box;
+}
+
+.card-footer {
+	display:flex;
+	align-items: center;
+
+	/* override footer css */
+	background-color: #fff;
+	border-top: none;
+	padding-top: 0;
+}
+
+.card-footer > * {
+	margin-right: 10px;
+}
+
+.card > hr, .card-body + hr {
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-bottom: 15px;
+	margin-top: 0;
+}
+
+.card-title {
+	margin: 0;
+}
+
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
+@import "../../../node_modules/bootstrap/scss/mixins";
+@import "../../../node_modules/bootstrap/scss/card";
