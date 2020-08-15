@@ -13,9 +13,17 @@ class FooterAnchor extends React.Component {
 		this.state = {child:''}
 	}
 	componentDidMount() {
-		let icon = this.props.type === "link"
-			? <span title={`Go to ${shortLink(this.props.src)}`} className="ignore card-link-icon">{"< />"}</span>
-			: <img src={icons[this.props.type]} title={`Go to ${this.props.type}`} alt={this.props.type} draggable="false" className="card-link-icon" />;
+		let icon;
+		switch(this.props.type) {
+			case "Gist":
+			case "GitHub":
+				icon = <img src={icons[this.props.type]} title={`Go to ${this.props.type}`} alt={this.props.type} draggable="false" className="card-link-icon" />;
+				break;
+			case "link":
+			default:
+				icon = <span title={`Go to ${shortLink(this.props.src)}`} className="ignore card-link-icon">{"< />"}</span>;
+				break;
+		}
 		this.setState({child:icon})
 	}
 	render() {
