@@ -32,7 +32,15 @@
       "last 1 safari version"
     ]
   },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react",
+      "@babel/core"
+    ]
+  },
   "devDependencies": {
+    "@babel/core": "^7.11.4",
     "gh-pages": "^3.1.0"
   }
 }
