@@ -1,5 +1,6 @@
 import React from 'react';
 import './Card.scss';
+import Body from './CardBody';
 import Footer from './CardFooter';
 
 class Card extends React.Component {
@@ -8,14 +9,7 @@ class Card extends React.Component {
 
     return (
       <div className="card">
-        <div className="card-body">
-          <h2 className="card-title">
-            {this.props.name}
-            {this.props.ongoing ? <span title="ongoing" className="help-cursor no-select">&nbsp;⚗</span> : <></>}
-          </h2>
-          <p className="card-text">{this.props.caption}</p>
-          <small className="text-muted">{this.props.lang}</small>
-        </div>
+        <Body {...this.props} />
         {hasFooter ? <Footer {...this.props} key={`${this.props.id}-footer`} /> : <></>}
       </div>
     );
