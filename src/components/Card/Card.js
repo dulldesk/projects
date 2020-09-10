@@ -1,8 +1,8 @@
 import React from 'react';
-import './Project.scss';
-import Footer from './Footer';
+import './Card.scss';
+import Footer from './CardFooter';
 
-class Project extends React.Component {
+class Card extends React.Component {
   render() {
     let hasFooter = Boolean(this.props.external);
 
@@ -22,4 +22,4 @@ class Project extends React.Component {
   }
 }
 
-export default Project;
+export default Card;

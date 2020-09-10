@@ -1,5 +1,5 @@
 import React from 'react';
-import Project from '../Project/Project';
+import Card from '../Card/Card';
 
 class ProjectListing extends React.Component {
   constructor() {
@@ -15,7 +15,7 @@ class ProjectListing extends React.Component {
       <div className="card-columns" id="node-cntr">
         { Object.entries(this.state.work).map(data => {
           data[1].id = data[0];
-          return <Project {...data[1]} key={data[1].id} />
+          return <Card {...data[1]} key={data[1].id} />
         })}
       </div>
     );

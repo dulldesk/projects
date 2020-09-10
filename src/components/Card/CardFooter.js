@@ -31,7 +31,7 @@ class FooterAnchor extends React.Component {
 	}
 }
 
-class Footer extends React.Component {
+class CardFooter extends React.Component {
 	constructor(props) {
 		super(props);
 		this.props.external.sort((a,b) => a.type.localeCompare(b.type));
@@ -47,4 +47,4 @@ class Footer extends React.Component {
 	}
 }
 
-export default Footer;
+export default CardFooter;
