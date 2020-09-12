@@ -8,7 +8,7 @@ class CardBody extends React.Component {
 			<div className="card-body">
 				<h2 className="card-title">
 					{this.props.name}
-					{this.props.ongoing ? <span title="ongoing" className="help-cursor no-select">&nbsp;<BuildIcon fontSize="small" /></span> : <></>}
+					{this.props.ongoing ? <span title="ongoing" className="ongoing no-select">&nbsp;<BuildIcon fontSize="small" /></span> : <></>}
 				</h2>
 				<p className="card-text">{this.props.caption}</p>
 				<small className="text-muted">{this.props.lang}</small>

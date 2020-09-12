@@ -25,26 +25,26 @@
 	}
 }
 
-
-img.card-link-icon {
-	@include filter(40%);
-}
-
 %card-link-icon-transition {
-	transition: filter 0.2s ease-out;
+	transition: color 0.2s ease-out;
 }
 
-.card-link-icon {
+.card-link-icon, .ongoing {
 	@extend %card-link-icon-transition;
-	@include filter(80%);
 	color: grey;
 	
 	&:hover {
 		@extend %card-link-icon-transition;
-		@include filter(100%);
-		cursor:pointer;
 		color: black;
 	}
+	
+	.card-link-icon:hover {
+		cursor:pointer;
+	}
+}
+
+.ongoing {
+	cursor: help;
 }
 
 .card, .card > div {
@@ -78,10 +78,6 @@ img.card-link-icon {
 
 .card-title {
 	margin: 0;
-}
-
-.help-cursor {
-	cursor: help;
 }
 
 .no-select {
