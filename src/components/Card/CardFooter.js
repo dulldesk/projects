@@ -2,6 +2,7 @@ import React from 'react';
 import LinkIcon from '@material-ui/icons/Link';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import SvgIcon from '@material-ui/core/SvgIcon'; 
+import BootstrapCard from 'react-bootstrap/Card';
 
 const shortLink = link => link.substring(link.indexOf("//")+2).replace(/\/+$/,'');
 
@@ -50,11 +51,11 @@ class CardFooter extends React.Component {
 	}
 	render() {
 		return (
-			<div className="card-footer">
+			<BootstrapCard.Footer>
 				{this.props.external.map(obj => 
 					<FooterIcon key={`${this.props.id}-anchor-${obj.type}`} type={obj.type} src={obj.src} />
 				)}
-			</div>
+			</BootstrapCard.Footer>
 		);
 	}
 }
