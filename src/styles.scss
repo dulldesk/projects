@@ -18,3 +18,11 @@ $code-font-size: 100%;
 	-ms-user-select: none;
 	user-select: none;
 }
+
+// Override bootstrap
+nav h1.nav-title {
+	font-size: 1.5em;
+	font-weight: 300;
+	margin-bottom: revert;
+	line-height: revert;
+}
