@@ -19,7 +19,8 @@
     "build": "react-scripts build",
     "eject": "react-scripts eject",
     "predeploy": "yarn build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "process-data": "node ./scripts/process-project-info.js"
   },
   "eslintConfig": {
     "extends": "react-app"
