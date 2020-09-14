@@ -1,4 +1,11 @@
-/* identical to https://dulldesk.github.io/scss/project-style.scss */
+/* nearly identical to https://dulldesk.github.io/scss/project-style.scss */
+
+@import '../../styles.scss';
+// @import "~bootstrap/scss/mixins/_breakpoints";
+@import "~bootstrap/scss/card";
+
+// Custom css
+
 %card-transition {
 	transition: box-shadow 0.1s ease-out;
 }
@@ -20,8 +27,9 @@
 		box-shadow: 5px 5px 10px grey;
 	}
 	
-	& h2 {
+	& .card-title {
 		font-weight: 300;
+		font-family: "Work Sans", sans-serif;
 	}
 }
 
@@ -47,10 +55,6 @@
 	cursor: help;
 }
 
-.card, .card > div {
-	box-sizing: content-box;
-}
-
 .card > hr, .card-body + hr {
 	margin: 20px {
 		bottom: 15px;
@@ -67,7 +71,7 @@
 
 .card-footer {
 	display:flex;
-	align-items: center;
+	// align-items: center;
 
 	@extend %temp-footer-bkgd;
 	
@@ -77,17 +81,14 @@
 }
 
 .card-title {
-	margin: 0;
+	margin-top: 0rem;
 }
 
-.no-select {
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+.card-columns {
+	@include media-breakpoint-up(sm) {
+		column-count: 2;
+	}
+	@include media-breakpoint-up(md) {
+		column-count: 3;
+	}
 }
-
-@import "../../../node_modules/bootstrap/scss/functions";
-@import "../../../node_modules/bootstrap/scss/variables";
-@import "../../../node_modules/bootstrap/scss/mixins";
-@import "../../../node_modules/bootstrap/scss/card";
