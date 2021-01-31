@@ -26,3 +26,36 @@ nav .menu-logo h1.nav-title {
 	margin-bottom: revert;
 	line-height: revert;
 }
+
+body {
+	background-color: #d6cfc8;
+	padding: 5rem;
+}
+
+h1 {
+	font-family: "Montserrat", "Segoe UI", sans-serif;
+}
+
+body, p {
+	font-family: "Open Sans", "Segoe UI", sans-serif;
+}
+
+$link: #782b4c;
+
+a, a:visited {
+	&, a:hover {
+		outline: none;
+		text-decoration: none;
+		color: black;
+		transition: all 0.15s ease-out;
+	}
+
+	&:not(.ignore) {
+		border-bottom: 1px solid $link;
+	}
+}
+
+a:hover {
+	color: $link; 
+	border-bottom-color: transparent;
+}
